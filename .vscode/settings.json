@@ -1,0 +1,12 @@
+{
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "cmake.configureOnOpen": true,
+    "editor.formatOnSave": true,
+    "clang-format.executable": "clang-format",
+    "clang-format.style": "google",
+    "clang-format.language.c.enable": true,
+    "files.trimTrailingWhitespace": true
+}
