@@ -23,24 +23,9 @@ fcitx-libs-dev libsamplerate0-dev libsndio-dev libwayland-dev \
 libxkbcommon-dev libdrm-dev libgbm-dev
 ```
 
-Create a small test project in `sdl2_test.c`:
+Create a small test project in `sdl2_test.c`.
 
-```C
-``
-
-Create a CMake config file `CMakeLists.txt`:
-
-```cmake
-cmake_minimum_required(VERSION 3.7)
-
-project(sdl2_test)
-
-find_package(SDL2 REQUIRED)
-include_directories(${SDL2_INCLUDE_DIRS})
-
-add_executable(sdl2_test.c)
-target_link_libraries(sdl2_test ${SDL2_LIBRARIES})
-```
+Create a CMake config file `CMakeLists.txt`.
 
 Build the project from the project's repo root:
 
