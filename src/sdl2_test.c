@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     printf("ERROR: SDL could not initialize. %s\n", SDL_GetError());
-    goto exit;
+    return -1;
   }
 
   win = SDL_CreateWindow("SDL Hello World", SDL_WINDOWPOS_UNDEFINED,
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
                          SDL_WINDOW_SHOWN);
   if (NULL == win) {
     printf("ERROR: could not create window. %s\n", SDL_GetError());
-    goto exit;
+    return -1;
   }
 
   scrnSurface = SDL_GetWindowSurface(win);
@@ -31,6 +31,5 @@ int main(int argc, char *argv[]) {
   SDL_DestroyWindow(win);
   SDL_Quit();
 
-exit:
   return 0;
 }
